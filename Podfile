@@ -6,7 +6,7 @@ target 'MyFinder' do
   use_frameworks!
 
   # Pods for MyFinder
-  pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack/Swift'
 
 end
 
@@ -15,5 +15,5 @@ target 'MyFinder Extension' do
   use_frameworks!
 
   # Pods for MyFinder Extension
-  pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack/Swift'
 end

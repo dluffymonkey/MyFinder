@@ -8,6 +8,7 @@
 
 import Cocoa
 import FinderSync
+import CocoaLumberjack
 
 class FinderSync: FIFinderSync {
     var myFolderURL = URL(fileURLWithPath: "/")
@@ -17,18 +18,24 @@ class FinderSync: FIFinderSync {
         
         // Set up the directory we are syncing.
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
-        writeToFile()
+        /// 添加控制台打印
+        DDLog.add(DDOSLogger.sharedInstance)
         redirectNSlogToDocumentFolder()
-        aa()
+        
+        DDLogVerbose("Verbose");
+        DDLogDebug("Debug");
+        DDLogInfo("Info");
+        DDLogWarn("Warn");
+        DDLogError("Error");
     }
     
-    private func aa() {
-        if let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
-            let documentsDirectory = NSURL(fileURLWithPath: path)
-            let logPath = documentsDirectory.appendingPathComponent("console.log")!
-            freopen(logPath.absoluteString.cString(using: .ascii),"a+", stderr)
-            freopen(logPath.absoluteString.cString(using: .ascii),"a+", stdout)
-        }
+    private func redirectNSlogToDocumentFolder() {
+        let filePath: String = NSHomeDirectory () + "/Documents/MyFinderSync.log"
+        let defaultManager = FileManager.default
+        try? defaultManager.removeItem(atPath: filePath)
+        
+        freopen(filePath.cString(using: String.Encoding.ascii), "a+", stdout)
+        freopen(filePath.cString(using: String.Encoding.ascii), "a+", stderr)
     }
     
     private func writeToFile() {
@@ -41,14 +48,7 @@ class FinderSync: FIFinderSync {
         freopen(logFilePath?.cString(using: String.Encoding.ascii), "a+", stderr)
     }
     
-    private func redirectNSlogToDocumentFolder() {
-        let filePath: String  =  NSHomeDirectory () + "/Documents/PrintfInfo1.log"
-        let defaultManager = FileManager.default
-        try? defaultManager.removeItem(atPath: filePath)
-        
-        freopen(filePath.cString(using: String.Encoding.ascii), "a+", stdout)
-        freopen(filePath.cString(using: String.Encoding.ascii), "a+", stderr)
-    }
+    
     
     // MARK: - Menu and toolbar item support
     
@@ -247,7 +247,7 @@ extension FinderSync {
     }
     
     @IBAction func copyPath(_ sender: NSMenuItem?) {
-        print("copy path111")
+        DDLogInfo("copy path111")
         let items = FIFinderSyncController.default().selectedItemURLs()
         
         guard let paths = items else {
