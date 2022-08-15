@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				1757E7322242601B00BD9916 /* Templates */,
-				173450782248AB34006ADD26 /* NewFile.swift */,
 			);
 			path = "New File";
 			sourceTree = "<group>";
@@ -179,6 +178,7 @@
 			children = (
 				1740446C224A4883001CC2AA /* MyFinder Extension.entitlements */,
 				17D217A622408EB200FB9FD4 /* FinderSync.swift */,
+				173450782248AB34006ADD26 /* NewFile.swift */,
 				1757E72F22421A1100BD9916 /* Common.swift */,
 				1734507A2248B175006ADD26 /* Terminal Here */,
 				173450772248AAAD006ADD26 /* New File */,
@@ -484,9 +484,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyFinder/MyFinder.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E7DD6882W6;
+				DEVELOPMENT_TEAM = T45LB287LC;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,9 +505,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MyFinder/MyFinder.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E7DD6882W6;
+				DEVELOPMENT_TEAM = T45LB287LC;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -522,10 +524,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinder Extension/MyFinder Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E7DD6882W6;
+				DEVELOPMENT_TEAM = T45LB287LC;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,10 +546,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinder Extension/MyFinder Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = E7DD6882W6;
+				DEVELOPMENT_TEAM = T45LB287LC;
 				INFOPLIST_FILE = "$(SRCROOT)/MyFinder Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

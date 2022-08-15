@@ -33,12 +33,22 @@ class FinderSync: FIFinderSync {
         return NSImage(named: "Icon_32x32")!
     }
     
+    enum MenuItemType {
+        case newFile
+        case copyPath
+        case openTerminalTab
+        case openTerminal
+        case createIPA
+        case custom(title: String,selector: Selector)
+    }
+    
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         let menu = NSMenu()
         let newFile = creatMenuItem(for: .newFile)
         let copyPath = creatMenuItem(for: .copyPath)
-        let openTerminal = creatMenuItem(for: .openTerminal)
-        let openTerminalTab = creatMenuItem(for: .openTerminalTab)
+//        let openTerminal = creatMenuItem(for: .openTerminal)
+//        let openTerminalTab = creatMenuItem(for: .openTerminalTab)
+        let createIPA = creatMenuItem(for: .createIPA)
         
         let newFileSub = NSMenu()
         self.newFileMenus.forEach { (menuItem) in
@@ -47,38 +57,32 @@ class FinderSync: FIFinderSync {
         newFile.submenu = newFileSub
         /**
          这种菜单方式感觉不够高效
-         //        switch menuKind {
-         //        case .toolbarItemMenu:
-         //            menu.addItem(newFile)
-         //            menu.addItem(copyPath)
-         //            menu.addItem(openTerminal)
-         //            menu.addItem(openTerminalTab)
-         //        default:
-         //            let menuSup = NSMenuItem(title: "My Finder", action: nil, keyEquivalent: "")
-         //            let subMenu = NSMenu()
-         //
-         //            subMenu.addItem(newFile)
-         //            subMenu.addItem(copyPath)
-         //            subMenu.addItem(openTerminal)
-         //            subMenu.addItem(openTerminalTab)
-         //
-         //            menu.addItem(menuSup);
-         //            menuSup.submenu = subMenu;
-         //        }
+         switch menuKind {
+         case .toolbarItemMenu:
+             menu.addItem(newFile)
+             menu.addItem(copyPath)
+             menu.addItem(openTerminal)
+             menu.addItem(openTerminalTab)
+         default:
+             let menuSup = NSMenuItem(title: "My Finder", action: nil, keyEquivalent: "")
+             let subMenu = NSMenu()
+ 
+             subMenu.addItem(newFile)
+             subMenu.addItem(copyPath)
+             subMenu.addItem(openTerminal)
+             subMenu.addItem(openTerminalTab)
+ 
+             menu.addItem(menuSup);
+             menuSup.submenu = subMenu;
+         }
          */
+        
         menu.addItem(newFile)
         menu.addItem(copyPath)
-        menu.addItem(openTerminal)
-        menu.addItem(openTerminalTab)
+//        menu.addItem(openTerminal)
+//        menu.addItem(openTerminalTab)
+        menu.addItem(createIPA)
         return menu
-    }
-    
-    enum MenuItemType {
-        case newFile
-        case copyPath
-        case openTerminalTab
-        case openTerminal
-        case custom(title: String,selector: Selector)
     }
     
     func creatMenuItem(for menuType: MenuItemType) -> NSMenuItem {
@@ -91,6 +95,8 @@ class FinderSync: FIFinderSync {
             return NSMenuItem(title: NSLocalizedString("Open Terminal On Tab", comment: ""), action: #selector(openTerminalTab(_:)), keyEquivalent: "")
         case .openTerminal:
             return NSMenuItem(title: NSLocalizedString("Open Terminal", comment: ""), action: #selector(openTerminal(_:)), keyEquivalent: "")
+        case .createIPA:
+            return NSMenuItem(title: NSLocalizedString("创建IPA文件", comment: ""), action: #selector(createIPA(_:)), keyEquivalent: "")
         case .custom(let title, let selector):
             if title == MenuItemTitle.separator {
 //                return NSMenuItem.separator() // TODO 为何是空白分割??
@@ -171,6 +177,18 @@ extension FinderSync {
             } else {
                 return [ target ]
             }
+        }
+    }
+    
+    
+    @IBAction func createIPA(_ sender: NSMenuItem?) {
+        let urls = urlsToOpen
+        
+        // hop over to the main queue
+        DispatchQueue.main.async {
+            // launch them!
+            let service = "New Terminal at Folder"
+            _ = ServiceRunner.run(service: service, withFileURLs: urls)
         }
     }
     
