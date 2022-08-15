@@ -1,0 +1,6 @@
+framework module Pods_MyFinder_Extension {
+  umbrella header "Pods-MyFinder Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

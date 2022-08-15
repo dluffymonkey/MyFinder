@@ -27,6 +27,8 @@
 		17D2179822408D2100FB9FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D2179622408D2100FB9FD4 /* Main.storyboard */; };
 		17D217A722408EB200FB9FD4 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D217A622408EB200FB9FD4 /* FinderSync.swift */; };
 		17D217AC22408EB200FB9FD4 /* MyFinder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 17D217A422408EB200FB9FD4 /* MyFinder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7696F6011513560D76B9372F /* Pods_MyFinder_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290B682D4D492F811D0CCCB6 /* Pods_MyFinder_Extension.framework */; };
+		FB1FA58525A68E0E9C5D356A /* Pods_MyFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08EAB9942B602D828A75A2E /* Pods_MyFinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,12 @@
 		17D217A422408EB200FB9FD4 /* MyFinder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MyFinder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D217A622408EB200FB9FD4 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		17D217A822408EB200FB9FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		290B682D4D492F811D0CCCB6 /* Pods_MyFinder_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinder_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8238AFF85B08301CE5DB01FE /* Pods-MyFinder Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinder Extension.debug.xcconfig"; path = "Target Support Files/Pods-MyFinder Extension/Pods-MyFinder Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B08EAB9942B602D828A75A2E /* Pods_MyFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9AA15720F89040730A3CBC /* Pods-MyFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinder.release.xcconfig"; path = "Target Support Files/Pods-MyFinder/Pods-MyFinder.release.xcconfig"; sourceTree = "<group>"; };
+		CF575F232364DD360276DB74 /* Pods-MyFinder Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinder Extension.release.xcconfig"; path = "Target Support Files/Pods-MyFinder Extension/Pods-MyFinder Extension.release.xcconfig"; sourceTree = "<group>"; };
+		DB807AE98B5DE1EBD1FB002E /* Pods-MyFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyFinder.debug.xcconfig"; path = "Target Support Files/Pods-MyFinder/Pods-MyFinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1FA58525A68E0E9C5D356A /* Pods_MyFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +105,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7696F6011513560D76B9372F /* Pods_MyFinder_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E28F005BEBD244F96568AB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB807AE98B5DE1EBD1FB002E /* Pods-MyFinder.debug.xcconfig */,
+				CA9AA15720F89040730A3CBC /* Pods-MyFinder.release.xcconfig */,
+				8238AFF85B08301CE5DB01FE /* Pods-MyFinder Extension.debug.xcconfig */,
+				CF575F232364DD360276DB74 /* Pods-MyFinder Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		173450772248AAAD006ADD26 /* New File */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +170,8 @@
 				17D2178F22408D2000FB9FD4 /* MyFinder */,
 				17D217A522408EB200FB9FD4 /* MyFinder Extension */,
 				17D2178E22408D2000FB9FD4 /* Products */,
+				0E28F005BEBD244F96568AB7 /* Pods */,
+				47253F8A052F7AF69A7BD73D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +213,15 @@
 			path = "MyFinder Extension";
 			sourceTree = "<group>";
 		};
+		47253F8A052F7AF69A7BD73D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B08EAB9942B602D828A75A2E /* Pods_MyFinder.framework */,
+				290B682D4D492F811D0CCCB6 /* Pods_MyFinder_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,10 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D2179D22408D2100FB9FD4 /* Build configuration list for PBXNativeTarget "MyFinder" */;
 			buildPhases = (
+				558916403AA2D8C5D7C493A3 /* [CP] Check Pods Manifest.lock */,
 				17D2178922408D2000FB9FD4 /* Sources */,
 				17D2178A22408D2000FB9FD4 /* Frameworks */,
 				17D2178B22408D2000FB9FD4 /* Resources */,
 				17D217B022408EB200FB9FD4 /* Embed App Extensions */,
+				5A6D5F5FEF0C3F587DA34AEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +250,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17D217AD22408EB200FB9FD4 /* Build configuration list for PBXNativeTarget "MyFinder Extension" */;
 			buildPhases = (
+				050EC6782ECF50FB430AE597 /* [CP] Check Pods Manifest.lock */,
 				17D217A022408EB200FB9FD4 /* Sources */,
 				17D217A122408EB200FB9FD4 /* Frameworks */,
 				17D217A222408EB200FB9FD4 /* Resources */,
@@ -306,6 +342,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		050EC6782ECF50FB430AE597 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinder Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		558916403AA2D8C5D7C493A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A6D5F5FEF0C3F587DA34AEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinder/Pods-MyFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyFinder/Pods-MyFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyFinder/Pods-MyFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17D2178922408D2000FB9FD4 /* Sources */ = {
@@ -480,6 +580,7 @@
 		};
 		17D2179E22408D2100FB9FD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB807AE98B5DE1EBD1FB002E /* Pods-MyFinder.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -501,6 +602,7 @@
 		};
 		17D2179F22408D2100FB9FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA9AA15720F89040730A3CBC /* Pods-MyFinder.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -522,6 +624,7 @@
 		};
 		17D217AE22408EB200FB9FD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8238AFF85B08301CE5DB01FE /* Pods-MyFinder Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinder Extension/MyFinder Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
@@ -544,6 +647,7 @@
 		};
 		17D217AF22408EB200FB9FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF575F232364DD360276DB74 /* Pods-MyFinder Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "MyFinder Extension/MyFinder Extension.entitlements";
 				CODE_SIGN_IDENTITY = "-";
